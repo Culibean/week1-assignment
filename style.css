@@ -17,6 +17,10 @@ header {
   background-color: rgb(224, 228, 241);
   padding: 7px;
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 /* fixed position ensure that header scrolls down */
@@ -62,7 +66,7 @@ main {
   flex-direction: column;
   background-color: rgb(224, 228, 241);
   padding: 20px;
-  margin-top: 200px;
+  margin-top: 260px;
 }
 
 .tag {
@@ -95,9 +99,11 @@ section {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  scroll-margin-top: 260px;
 }
 
 /* background-position keeps image behind sections without duplication  */
+/* scroll-margin-top used to ensure that nav bar always scrolls to the right section. Experienced an issue when clicking on About Us, it scrolled now quite up. Potentially due to the margin of my main section. Found this fix, but will check if there is an easier option, potentially with flexbox. */
 
 .btn {
   background-color: rgb(2, 4, 60);
