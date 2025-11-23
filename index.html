@@ -16,10 +16,10 @@
         src="./images/Website Logo.png"
         alt="Logo of website with plane in brown. Includes name of the website"
       />
-      <section id="banner">
+      <div id="banner">
         <h1>The Flying Past</h1>
         <h2>A Journey Through Aviation’s Timeless Classics</h2>
-      </section>
+      </div>
 
       <nav id="nav">
         <!-- includes all the links from the navigation bar -->
@@ -50,8 +50,7 @@
         </a>
       </section>
       <br />
-      <section id="History" class="jetliner-image">
-        <!-- put image in CSS!!! -->
+      <section id="History">
         <h3 class="tag">The History of the Jetliner</h3>
         <br />
         <p>
@@ -135,7 +134,7 @@
         >
           Message us
         </a>
-        <!-- different button than the ones above -->
+        <!-- use type button and a tag if using a button that should link (or build within JS) -->
       </section>
       <br />
       <section id="social-media">
@@ -170,10 +169,12 @@
           src="./images/blog.png"
         />
       </section>
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     </main>
 
     <footer>
-      <a href="#" id="impressum">Impressum</a>
+      <a href="#" id="impressum">Privacy</a>
+      <a href="#" id="impressum">Cookies</a>
       <a href="#" id="termsconditions">Terms & Conditions</a>
       <a>(c)The Flying Past 2025</a>
     </footer>

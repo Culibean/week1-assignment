@@ -19,6 +19,8 @@ header {
   position: fixed;
 }
 
+/* fixed position ensure that header scrolls down */
+
 #logo {
   height: inherit;
   width: 180px;
@@ -45,8 +47,7 @@ h2 {
   flex-direction: column;
 }
 
-#nav,
-#social-media {
+#nav {
   display: flex;
   font-weight: bolder;
   font-size: 1rem;
@@ -78,12 +79,15 @@ p {
   padding: 15px;
 }
 
-#AboutUs,
+/* can use either all ID's or sections */
+
+/* #AboutUs,
 #Style,
 #History,
 #Cocktails,
 #Shop,
-#Contact {
+#Contact { */
+section {
   border: solid rgb(205, 207, 223);
   padding: 30px;
   background-image: url(./images/Boeing\ 747.png);
@@ -92,6 +96,8 @@ p {
   background-position: center;
   background-attachment: fixed;
 }
+
+/* background-position keeps image behind sections without duplication  */
 
 .btn {
   background-color: rgb(2, 4, 60);
@@ -103,11 +109,16 @@ p {
   cursor: pointer;
 }
 
+.btn:hover {
+  background-color: rgb(114, 156, 117);
+}
+
 #social-media {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
   gap: 10px;
+  align-items: center;
 }
 
 .social-icons {
@@ -121,4 +132,32 @@ footer {
   justify-content: space-between;
   padding: 15px;
   font-weight: bolder;
+}
+
+/* Stretch Goal go to top button (https://www.w3schools.com/howto/howto_js_scroll_to_top.asp) */
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  background-color: rgb(2, 4, 60);
+  color: aliceblue;
+  border: 3px solid white;
+  padding: 15px;
+  border-radius: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  z-index: 99;
+  border-radius: 15px;
+}
+
+#myBtn:hover {
+  background-color: rgb(114, 156, 117);
+}
+
+/* Stretch Goal smooth scrolling: */
+
+html {
+  scroll-behavior: smooth;
 }
